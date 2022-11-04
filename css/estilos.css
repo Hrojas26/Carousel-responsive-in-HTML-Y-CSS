@@ -1,0 +1,170 @@
+* {
+	box-sizing: border-box;
+}
+
+.contenedor .ul{
+	width: 100%;
+	background-color: pink;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.contenedor .li{
+
+	background-color:lightskyblue;
+	padding: 1em;
+	margin:0 1em 0 0 ;
+	transition: all .5s ease;
+
+
+}
+.contenedor .li.activo{
+	background-color: black;
+	
+
+}
+
+.contenedor .subcontenedor{
+	min-height: 0vh;
+	offset-position: 10em;
+	margin: 0em;	
+}
+
+.contenedor .bloque{
+
+	padding: 1em;
+	margin: 10px;
+	ruby-position: inline;
+	top: 10px;
+	transition: all .5s ease;
+	visibility: hidden;
+	height: 0px;
+
+}
+
+.contenedor .bloque.activo{
+	
+	visibility: visible;
+	height: fit-content;
+}
+body {
+	background: whitesmoke;
+	color: #ffffff;
+	font-family: sans-serif;
+	min-height: 100vh;
+	display: block;
+	align-items: center;
+}
+
+.contenedor {
+	max-width: 100%;
+	width: 95%;
+	margin: auto;
+}
+
+/* --- --- CONTENEDOR PRINCIPAL --- --- */
+
+.contenido-principal {
+	margin-bottom: 20px;
+	display: block;
+	align-items: left;
+	justify-content: center;
+}
+
+.contenido-principal__imagen {
+
+	margin-top: 20px;
+	width: 105%;
+	align-content: auto;
+}
+
+.contenido-principal__contenedor {
+	width: 50%;
+}
+
+
+/* --- --- CAROUSEL --- --- */
+.carousel__contenedor {
+	position: relative;
+}
+
+.carousel__anterior,
+.carousel__siguiente {
+	position: absolute;
+	display: block;
+	width: 30px;
+	height: 30px;
+	border: black;
+	top: calc(50% - 35px);
+	cursor: pointer;
+	line-height: 30px;
+	text-align: center;
+	background: none;
+	color: black;
+	opacity: 20%;
+}
+
+.carousel__anterior:hover,
+.carousel__siguiente:hover {
+	opacity: 100%;
+}
+
+.carousel__anterior {
+	left: -30px;
+}
+
+.carousel__siguiente {
+	right: -30px;
+}
+
+.carousel__lista {
+	
+	font-family:sans-serif;
+	color: gray;
+	font-weight: bold;
+	font-size: 95%;
+	
+}
+
+
+
+.carousel__elemento {  
+
+	text-align: left;
+	display: inline-block;
+
+}
+
+
+
+.carousel__indicadores .glider-dot {
+	display: block;
+	width: 30px;
+	height: 4px;
+	background: black;
+	opacity: 20%;
+	border-radius: 30;
+}
+
+.carousel__indicadores .glider-dot:hover {
+	opacity: .5;
+}
+
+.carousel__indicadores .glider-dot.active {
+	opacity: 1;
+}
+
+@media screen and (max-width: 800px) {
+	body {
+		padding: 40px 0;
+	}
+
+	.contenido-principal {
+		flex-direction: column;
+	}
+
+	.contenido-principal > * {
+		width: 100%;
+	}
+}
